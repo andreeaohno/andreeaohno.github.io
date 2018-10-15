@@ -1,8 +1,8 @@
 function resolve() {
 
-        var a = document.getElementById("a").valueOf();
-        var b = document.getElementById("b").valueOf();
-        var c = document.getElementById("c").valueOf();
+        var a = document.getElementById("a").val();
+        var b = document.getElementById("b").val();
+        var c = document.getElementById("c").val();
         var delta = null;
         var x1 = null;
         var x2 = null;

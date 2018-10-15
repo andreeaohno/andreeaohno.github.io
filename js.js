@@ -5,7 +5,7 @@ $(document).ready(function(){
         $c = $('#c').val();
         $delta = null;
 
-        if($a == 0) {
+        if($a === 0) {
             $('#type').html('Ecuatie de gradul 1');
         }
             $delta = $b*$b -4*$a*$c;

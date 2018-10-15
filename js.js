@@ -17,8 +17,8 @@ document.getElementById("calculeaza").on("click",function () {
     }
     else{
         if(delta === 0) {
-            x1 = -($b/2*$a);
-            x2=$x1;
+            x1 = -(b/2*a);
+            x2=x1;
             document.getElementById('x1').innerHTML(x1);
             document.getElementById('x2').innerHTML(x2);
         } else {

@@ -1,33 +1,33 @@
-$(document).ready(function(){
-    $('#calculeaza').on('click',function () {
-        $a = $('#a').val();
-        $b = $('#b').val();
-        $c = $('#c').val();
-        $delta = null;
+document.getElementById("calculeaza").on("click",function () {
+    var a=document.getElementById("a").valueOf();
+    var b=document.getElementById("b").valueOf();
+    var c=document.getElementById("c").valueOf();
+    var delta= null;
+    var x1=null;
+    var x2=null;
 
-        if($a === 0) {
-            $('#type').html('Ecuatie de gradul 1');
+    if(a === 0) {
+        document.getElementById('type').innerHTML('Ecuatie de gradul 1');
+    }
+    delta = b*b -4*a*c;
+
+    if(delta < 0)
+    {
+        document.getElementById('type').innerHTML('Ecuatie nu are solutii reale');
+    }
+    else{
+        if(delta === 0) {
+            x1 = -($b/2*$a);
+            x2=$x1;
+            document.getElementById('x1').innerHTML(x1);
+            document.getElementById('x2').innerHTML(x2);
+        } else {
+            x1 = (-b+(Math.sqrt(delta)))/(2*a);
+            x2 = (-b-(Math.sqrt(delta)))/(2*a);
+            document.getElementById('x1').innerHTML(x1);
+            document.getElementById('x2').innerHTML(x2);
         }
-            $delta = $b*$b -4*$a*$c;
-
-            if($delta < 0)
-            {
-                $('#type').html('Ecuatie nu are solutii reale');
-            }
-            else{
-                if($delta === 0) {
-                    $x1=null;
-                    $x2=null;
-                    $x1 = -($b/2*$a);
-                    $x2=$x1;
-                    $('#x1').html($x1);
-                    $('#x2').html($x2);
-                } else {
-                    $x1 = (-$b+(sqrt($delta)))/2*$a;
-                    $x2 = (-$b-(sqrt($delta)))/2*$a;
-                    $('#x1').html($x1);
-                    $('#x2').html($x2);
-                }
-            }
-    });
+    }
 });
+
+
